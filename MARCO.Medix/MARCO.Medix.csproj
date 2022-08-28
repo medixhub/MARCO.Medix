@@ -5,7 +5,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Medix-N\" />
-    <Folder Include="Medix-H\" />
   </ItemGroup>
   <ItemGroup>
   

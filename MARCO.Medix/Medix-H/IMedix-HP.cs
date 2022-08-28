@@ -13,7 +13,8 @@ namespace MARCO.Medix.Medix_H
     [ServiceContract]
     public interface IMedix_HP : IGrpcService
     {
-
+        [OperationContract]
         public IHCodeResponse GetHCode(IHCodeRequest codeRequest);
+
     }
 }
