@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace MARCO.Medix.Medix_H
 {
     [ServiceContract]
-    public interface IMedix_HP : IGrpcService
+    public interface IMedixHP : IGrpcService
     {
         [OperationContract]
         public IHCodeResponse GetHCode(IHCodeRequest codeRequest);

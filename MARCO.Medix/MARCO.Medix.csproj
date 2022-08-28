@@ -4,9 +4,6 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Medix-N\" />
-  </ItemGroup>
-  <ItemGroup>
   
     <PackageReference Include="Google.Protobuf" Version="3.14.0" />
  
@@ -27,6 +24,9 @@
     <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
     <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Medix-N\Dtos\Response\" />
   </ItemGroup>
 
 
