@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MARCO.Medix.Dtos.Medix_H.Response
 {
-    public interface IHCodeResponse : IBaseResponse
+    public interface ICodeResponse : IBaseResponse
     {
         [DataMember]
         public string Code { get; set; }
