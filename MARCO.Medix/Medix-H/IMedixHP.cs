@@ -15,7 +15,7 @@ namespace MARCO.Medix.Medix_H
     public interface IMedixHP 
     {
         [OperationContract]
-        public ICodeResponse IssueCode(IHCodeRequest codeRequest);
+        public ICodeResponse IssueCode(ICodeRequest codeRequest);
         /// <summary>
         /// query can be a regex expression
         /// </summary>
