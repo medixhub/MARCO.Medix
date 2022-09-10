@@ -11,6 +11,6 @@ namespace MARCO.Medix.Dtos.Medix_H.Response
     public interface IHCodeResponse : IBaseResponse
     {
         [DataMember]
-        public string HCode { get; set; }
+        public string Code { get; set; }
     }
 }
