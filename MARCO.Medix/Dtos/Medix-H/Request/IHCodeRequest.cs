@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MARCO.Medix.Medix_H.Dtos.Request
+namespace MARCO.Medix.Dtos.Medix_H.Request
 {
     public interface IHCodeRequest
     {

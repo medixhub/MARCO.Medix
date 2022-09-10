@@ -1,7 +1,6 @@
-﻿using MARCO.Medix.Grpc;
-using MARCO.Medix.Medix_H.Dtos;
-using MARCO.Medix.Medix_H.Dtos.Request;
-using MARCO.Medix.Medix_H.Dtos.Response;
+﻿using MARCO.Medix.Dtos.Medix_H;
+using MARCO.Medix.Dtos.Medix_H.Request;
+using MARCO.Medix.Dtos.Medix_H.Response;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 namespace MARCO.Medix.Medix_H
 {
     [ServiceContract]
-    public interface IMedixHP : IGrpcService
+    public interface IMedixHP 
     {
         [OperationContract]
         public IHCodeResponse GetHCode(IHCodeRequest codeRequest);

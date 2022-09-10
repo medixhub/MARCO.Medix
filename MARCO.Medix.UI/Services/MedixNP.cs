@@ -4,7 +4,7 @@ using MARCO.Medix.Medix_N.Dtos.Request;
 
 namespace MARCO.Medix.UI.Services
 {
-    public class MedixNP : IMedixNP
+    public class MedixNP : IMedixNP 
     {
         public IHttpContextAccessor HttpContextAccessor => throw new NotImplementedException();
 

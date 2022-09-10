@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MARCO.Medix.Medix_H.Dtos.Response
+namespace MARCO.Medix.Dtos.Medix_H.Response
 {
     public enum ResponseStatus
     {

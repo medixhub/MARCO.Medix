@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MARCO.Medix.Medix_H.Dtos
+namespace MARCO.Medix.Dtos.Medix_H
 {
     public class IPhysician
     {

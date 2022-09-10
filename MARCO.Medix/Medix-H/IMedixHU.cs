@@ -1,6 +1,7 @@
-﻿using MARCO.Medix.Medix_H.Dtos.Request;
-using MARCO.Medix.Medix_H.Dtos.Response;
-using MARCO.Medix.Medix_H.Dtos;
+﻿
+using MARCO.Medix.Dtos.Medix_H;
+using MARCO.Medix.Dtos.Medix_H.Request;
+using MARCO.Medix.Dtos.Medix_H.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;

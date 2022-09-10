@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MARCO.Medix.Medix_N.Dtos.Request
+namespace MARCO.Medix.Dtos.Medix_N.Request
 {
     public interface IDownloadStudyRequest
     {

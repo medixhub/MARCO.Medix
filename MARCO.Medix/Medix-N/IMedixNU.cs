@@ -1,5 +1,5 @@
-﻿using MARCO.Medix.Grpc.Dtos;
-using MARCO.Medix.Medix_N.Dtos.Request;
+﻿using MARCO.Medix.Dtos;
+using MARCO.Medix.Dtos.Medix_N.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;

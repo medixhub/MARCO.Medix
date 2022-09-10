@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using MARCO.Medix.Grpc.Dtos;
+ 
 
-namespace MARCO.Medix.Medix_H.Dtos.Response
+namespace MARCO.Medix.Dtos.Medix_H.Response
 {
     public interface IHCodeResponse : IBaseResponse
     {

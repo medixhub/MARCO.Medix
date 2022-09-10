@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\Medix-N\Response\**" />
+    <EmbeddedResource Remove="Dtos\Medix-N\Response\**" />
+    <None Remove="Dtos\Medix-N\Response\**" />
+  </ItemGroup>
   <ItemGroup>
   
     <PackageReference Include="Google.Protobuf" Version="3.14.0" />
@@ -17,16 +23,13 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Serilog" Version="2.11.0-dev-01377" />
-    <PackageReference Include="ServiceModel.Grpc" Version="1.4.0" />
-    <PackageReference Include="ServiceModel.Grpc.AspNetCore" Version="1.4.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
     <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
     <PackageReference Include="System.Reactive.Linq" Version="5.0.0" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Medix-N\Dtos\Response\" />
+    <PackageReference Include="ServiceModel.Grpc" Version="1.4.0" />
+    <PackageReference Include="ServiceModel.Grpc.AspNetCore" Version="1.4.0" />
   </ItemGroup>
 
 
