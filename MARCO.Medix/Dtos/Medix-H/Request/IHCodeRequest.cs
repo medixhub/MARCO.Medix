@@ -9,10 +9,6 @@ namespace MARCO.Medix.Dtos.Medix_H.Request
 {
     public interface IHCodeRequest
     {
-        // string Modality { get; set; }
-        //  string PatientSex { get; set; }
-        //  string BodyPartExamined { get; set; }
-        //  string StudyDesc { get; set; }
         [DataMember]
         string MobileNumber { get; set; }
         [DataMember]
@@ -31,6 +27,13 @@ namespace MARCO.Medix.Dtos.Medix_H.Request
         string InstitutionId { get; set; }
         [DataMember]
         string SendTo { get; set; }
-
+        [DataMember]
+        bool IssueImmediate { get; set; }
+        [DataMember]
+        string NationalID { get; set; }
+        [DataMember]
+        string PatientID { get; set; }
+        [DataMember]
+        string LocalPatientName { get; set; }
     }
 }
