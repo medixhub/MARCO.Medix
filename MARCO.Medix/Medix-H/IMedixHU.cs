@@ -13,7 +13,7 @@ namespace MARCO.Medix.Medix_H
 {
     public interface IMedixHU
     {
-        public ICodeResponse GetHCode(ICodeRequest codeRequest);
+        public ICodeResponse GetHCode(IIssueCodeRequest codeRequest);
         public IAsyncEnumerable<IPhysician> GetPhysicians(string query);
     }
 }
