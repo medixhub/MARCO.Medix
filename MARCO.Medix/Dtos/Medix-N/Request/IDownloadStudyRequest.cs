@@ -17,7 +17,6 @@ namespace MARCO.Medix.Dtos.Medix_N.Request
         public string FileName { get; set; }
         [DataMember]
         public string WebhookUri { get; set; }
-        [DataMember]
-        public string Token { get; set; }
+     
     }
 }

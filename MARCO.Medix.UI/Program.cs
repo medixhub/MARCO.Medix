@@ -1,4 +1,6 @@
+using MARCO.Medix.UI.Data;
 using MARCO.Medix.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +24,8 @@ services.AddSwaggerGen(c =>
 
 services.AddServiceModelGrpc();
 services.AddServiceModelGrpcSwagger();
+
+services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
 
 
 var app = builder.Build();
