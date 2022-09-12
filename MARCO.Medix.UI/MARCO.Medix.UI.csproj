@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MARCO.Medix.Grpc\MARCO.Medix.Grpc.csproj" />
     <ProjectReference Include="..\MARCO.Medix\MARCO.Medix.csproj" />
   </ItemGroup>
 

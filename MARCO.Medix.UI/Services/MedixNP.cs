@@ -1,14 +1,15 @@
-﻿using MARCO.Medix.Grpc.Dtos;
+﻿using MARCO.Medix.Dtos;
+using MARCO.Medix.Dtos.Medix_N.Request;
+using MARCO.Medix.Grpc;
 using MARCO.Medix.Medix_N;
-using MARCO.Medix.Medix_N.Dtos.Request;
 
 namespace MARCO.Medix.UI.Services
 {
-    public class MedixNP : IMedixNP 
+    public class MedixNP : IMedixNP , IGrpcService
     {
         public IHttpContextAccessor HttpContextAccessor => throw new NotImplementedException();
 
-        public IBaseResponse DownloadStudy(IDownloadStudyRequest downloadStudyRequest)
+        IBaseResponse IMedixNP.DownloadStudy(IDownloadStudyRequest downloadStudyRequest)
         {
             throw new NotImplementedException();
         }

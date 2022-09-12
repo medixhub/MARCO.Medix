@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MARCO.Medix.Dtos.Medix_H.Request
 {
-    public interface ICodeRequest
+    public interface IIssueCodeRequest
     {
         [DataMember]
         string MobileNumber { get; set; }
