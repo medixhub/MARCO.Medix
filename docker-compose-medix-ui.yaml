@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  medix-ui:
+    container_name: medix-ui
+    image: medix-ui
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
