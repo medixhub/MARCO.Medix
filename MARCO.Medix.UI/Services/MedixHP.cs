@@ -10,23 +10,40 @@ namespace MARCO.Medix.UI.Services
 {
     public class MedixHP : IMedixHP, IGrpcService
     {
-        //public MedixHP(MedixDbContext medixDbContext, IHttpContextAccessor httpContextAccessor)
-        //{
-        //    MedixDbContext = medixDbContext;
-        //    HttpContextAccessor = httpContextAccessor;
-        //}
+        public MedixHP(MedixDbContext medixDbContext)
+        {
+            MedixDbContext = medixDbContext;
+
+        }
 
         public IHttpContextAccessor HttpContextAccessor { get; set; }
         public MedixDbContext MedixDbContext { get; }
         public CodeResponse IssueCode(IssueCodeRequest codeRequest)
         {
+            var list = MedixDbContext.Physicians.Add(new Models.Physician()
+            {
+                PhysicianId = "10004",
+                Name = "Name 10004",
+                Code = "10004",
+                Gender = Gender.Male,
+                Address = "a1",
+                InsertDate = DateTime.Now,
+                Phone = "01",
+                RefuteDescription = "",
+                Specialty = "",
 
+
+
+            });
+
+            MedixDbContext.SaveChanges();
             return new CodeResponse() { Code = "sample" };
 
         }
 
         public IEnumerable<IssueCodeRequest> GetIssuedCodes(GetIssuedCodesRequest request)
         {
+            var list = MedixDbContext.Physicians.ToList();
             throw new NotImplementedException();
         }
 
@@ -36,7 +53,7 @@ namespace MARCO.Medix.UI.Services
             throw new NotImplementedException();
         }
 
-     
-            
+
+
     }
 }

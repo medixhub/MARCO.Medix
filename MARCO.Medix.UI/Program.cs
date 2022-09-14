@@ -2,6 +2,7 @@ using MARCO.Medix.Dtos.Medix_H.Response;
 using MARCO.Medix.UI.Data;
 
 using MARCO.Medix.UI.Services;
+using MARCO.Medix.UI.Tools;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Any;
@@ -32,12 +33,13 @@ services.AddServiceModelGrpc();
 services.AddServiceModelGrpcSwagger();
 services.AddScoped<ICodeResponse, CodeResponse>();
 services.AddSwaggerGenNewtonsoftSupport();
-//services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
+services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
 
 
 var app = builder.Build();
 
-
+var dbContext = app.Services.GetRequiredService<MedixDbContext>();
+SeedData.AddPhysicians(dbContext);
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -59,17 +61,5 @@ app.UseCors(x => x
 app.UseStaticFiles();
 
 app.Run();
-public class EnumSchemaFilter : ISchemaFilter
-{
-    public void Apply(OpenApiSchema model, SchemaFilterContext context)
-    {
-        if (context.Type.IsEnum)
-        {
-            model.Enum.Clear();
-            Enum.GetNames(context.Type)
-                .ToList()
-                .ForEach(n => model.Enum.Add(new OpenApiString(n)));
-        }
-    }
-}
- 
+
+
