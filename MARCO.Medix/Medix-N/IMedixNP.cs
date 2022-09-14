@@ -14,7 +14,7 @@ namespace MARCO.Medix.Medix_N
     public interface IMedixNP
     {
         [OperationContract]
-        public IBaseResponse DownloadStudy(IDownloadStudyRequest downloadStudyRequest);
+        public BaseResponse DownloadStudy(DownloadStudyRequest downloadStudyRequest);
 
     }
 }

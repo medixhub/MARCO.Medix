@@ -1,7 +1,12 @@
+using MARCO.Medix.Dtos.Medix_H.Response;
 using MARCO.Medix.UI.Data;
+
 using MARCO.Medix.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,13 +24,15 @@ services.AddSwaggerGen(c =>
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Medix", Version = "v1" });
                 c.EnableAnnotations(true, true);
                 c.UseAllOfForInheritance();
+                c.SchemaFilter<EnumSchemaFilter>();
 
             });
 
 services.AddServiceModelGrpc();
 services.AddServiceModelGrpcSwagger();
-
-services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
+services.AddScoped<ICodeResponse, CodeResponse>();
+services.AddSwaggerGenNewtonsoftSupport();
+//services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
 
 
 var app = builder.Build();
@@ -52,3 +59,17 @@ app.UseCors(x => x
 app.UseStaticFiles();
 
 app.Run();
+public class EnumSchemaFilter : ISchemaFilter
+{
+    public void Apply(OpenApiSchema model, SchemaFilterContext context)
+    {
+        if (context.Type.IsEnum)
+        {
+            model.Enum.Clear();
+            Enum.GetNames(context.Type)
+                .ToList()
+                .ForEach(n => model.Enum.Add(new OpenApiString(n)));
+        }
+    }
+}
+ 

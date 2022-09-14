@@ -5,14 +5,15 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MARCO.Medix.Dtos.Medix_H.Response
+namespace MARCO.Medix.Dtos
 {
+    [DataContract]
     public enum ResponseStatus
     {
         [DataMember]
-        Failed =0,
+        Failed = 0,
         [DataMember]
-        Success =1
+        Success = 1
 
     }
 }

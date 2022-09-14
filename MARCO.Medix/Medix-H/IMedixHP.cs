@@ -1,4 +1,4 @@
-﻿using MARCO.Medix.Dtos.Medix_H;
+﻿using MARCO.Medix.Dtos;
 using MARCO.Medix.Dtos.Medix_H.Request;
 using MARCO.Medix.Dtos.Medix_H.Response;
 using Microsoft.AspNetCore.Http;
@@ -15,7 +15,7 @@ namespace MARCO.Medix.Medix_H
     public interface IMedixHP 
     {
         [OperationContract]
-        public ICodeResponse IssueCode(IIssueCodeRequest codeRequest);
+        public CodeResponse IssueCode(IssueCodeRequest codeRequest);
         /// <summary>
         /// query can be a regex expression
         /// </summary>
@@ -28,9 +28,9 @@ namespace MARCO.Medix.Medix_H
         /// 
         /// </returns>
         [OperationContract]
-        public IAsyncEnumerable<IPhysician> GetPhysicians(string query);
+        public IEnumerable<Physician> GetPhysicians(string query);
         [OperationContract]
-        public IAsyncEnumerable<IIssueCodeRequest> GetIssuedCodes(IGetIssuedCodesRequest request);
+        public IEnumerable<IssueCodeRequest> GetIssuedCodes(GetIssuedCodesRequest request);
     }
  
 }

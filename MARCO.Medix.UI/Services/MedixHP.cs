@@ -1,15 +1,16 @@
-﻿using MARCO.Medix.Dtos.Medix_H;
+﻿using MARCO.Medix.Dtos;
 using MARCO.Medix.Dtos.Medix_H.Request;
 using MARCO.Medix.Dtos.Medix_H.Response;
 using MARCO.Medix.Grpc;
 using MARCO.Medix.Medix_H;
 using MARCO.Medix.UI.Data;
 
+
 namespace MARCO.Medix.UI.Services
 {
     public class MedixHP : IMedixHP, IGrpcService
     {
-        //public MedixHP(MedixDbContext medixDbContext,IHttpContextAccessor httpContextAccessor)
+        //public MedixHP(MedixDbContext medixDbContext, IHttpContextAccessor httpContextAccessor)
         //{
         //    MedixDbContext = medixDbContext;
         //    HttpContextAccessor = httpContextAccessor;
@@ -17,27 +18,25 @@ namespace MARCO.Medix.UI.Services
 
         public IHttpContextAccessor HttpContextAccessor { get; set; }
         public MedixDbContext MedixDbContext { get; }
+        public CodeResponse IssueCode(IssueCodeRequest codeRequest)
+        {
 
-        public IAsyncEnumerable<IIssueCodeRequest> GetIssuedCodes(IGetIssuedCodesRequest request)
+            return new CodeResponse() { Code = "sample" };
+
+        }
+
+        public IEnumerable<IssueCodeRequest> GetIssuedCodes(GetIssuedCodesRequest request)
         {
             throw new NotImplementedException();
         }
 
-        public IAsyncEnumerable<IPhysician> GetPhysicians(string query)
+
+        public IEnumerable<Physician> GetPhysicians(string query)
         {
-            var d = MedixDbContext.Physicians.ToList();
             throw new NotImplementedException();
         }
 
-        public ICodeResponse IssueCode(IIssueCodeRequest codeRequest)
-        {
      
-            throw new NotImplementedException();
-        }
-
-        IAsyncEnumerable<IPhysician> IMedixHP.GetPhysicians(string query)
-        {
-            throw new NotImplementedException();
-        }
+            
     }
 }

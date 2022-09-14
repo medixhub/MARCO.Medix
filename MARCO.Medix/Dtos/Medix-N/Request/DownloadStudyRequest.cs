@@ -7,13 +7,17 @@ using System.Threading.Tasks;
 
 namespace MARCO.Medix.Dtos.Medix_N.Request
 {
-    public interface IDownloadStudyRequest
+    [DataContract]
+    public class DownloadStudyRequest: IDownloadStudyRequest
     {
-       
+
+        [DataMember]
         public string StudyInstanceUID { get; set; }
+        [DataMember]
         public string PatientID { get; set; }
+        [DataMember]
         public string FileName { get; set; }
+        [DataMember]
         public string WebhookUri { get; set; }
-     
     }
 }

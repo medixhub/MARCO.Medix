@@ -1,13 +1,19 @@
-﻿using MARCO.Medix.Dtos;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
-namespace MARCO.Medix.UI.Models
+namespace MARCO.Medix.Dtos
 {
-    public class Physician : IPhysician
+    public interface IPhysician
     {
         public string PhysicianId { get; set; }
         public string Name { get; set; }
         [JsonConverter(typeof(JsonStringEnumConverter))]
+        [EnumDataType(typeof(Gender))]
         public Gender Gender { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
@@ -15,5 +21,8 @@ namespace MARCO.Medix.UI.Models
         public string Specialty { get; set; }
         public DateTime InsertDate { get; set; }
         public string RefuteDescription { get; set; }
+
     }
+    
+
 }

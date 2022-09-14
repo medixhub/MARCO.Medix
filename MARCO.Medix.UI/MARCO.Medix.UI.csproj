@@ -25,6 +25,7 @@
     </PackageReference>
     <PackageReference Include="ServiceModel.Grpc" Version="1.4.10" />
     <PackageReference Include="ServiceModel.Grpc.AspNetCore" Version="1.4.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.4.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="4.10.0" />
     <PackageReference Include="ServiceModel.Grpc.AspNetCore.Swashbuckle" Version="1.4.10" />
@@ -44,6 +45,11 @@
   <ItemGroup>
     <ProjectReference Include="..\MARCO.Medix.Grpc\MARCO.Medix.Grpc.csproj" />
     <ProjectReference Include="..\MARCO.Medix\MARCO.Medix.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contract\" />
+    <Folder Include="Dto\" />
   </ItemGroup>
 
 </Project>

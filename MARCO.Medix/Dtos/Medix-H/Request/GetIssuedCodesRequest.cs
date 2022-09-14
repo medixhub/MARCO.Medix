@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace MARCO.Medix.Dtos.Medix_H.Request
 {
-    public interface IGetIssuedCodesRequest
+    [DataContract]
+    public class GetIssuedCodesRequest : IGetIssuedCodesRequest
     {
-        string StudyInstanceUID { get; set; }
+        [DataMember]
+        public string StudyInstanceUID { get; set; }
     }
 }

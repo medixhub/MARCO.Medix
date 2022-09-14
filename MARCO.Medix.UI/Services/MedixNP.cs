@@ -5,13 +5,14 @@ using MARCO.Medix.Medix_N;
 
 namespace MARCO.Medix.UI.Services
 {
-    public class MedixNP : IMedixNP , IGrpcService
+    public class MedixNP : IMedixNP, IGrpcService
     {
         public IHttpContextAccessor HttpContextAccessor => throw new NotImplementedException();
 
-        IBaseResponse IMedixNP.DownloadStudy(IDownloadStudyRequest downloadStudyRequest)
+        public BaseResponse DownloadStudy(DownloadStudyRequest downloadStudyRequest)
         {
             throw new NotImplementedException();
         }
+ 
     }
 }
