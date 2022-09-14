@@ -1,4 +1,5 @@
-﻿using MARCO.Medix.Dtos;
+﻿using AutoMapper;
+using MARCO.Medix.Dtos;
 using MARCO.Medix.Dtos.Medix_H.Request;
 using MARCO.Medix.Dtos.Medix_H.Response;
 using MARCO.Medix.Grpc;
@@ -10,14 +11,16 @@ namespace MARCO.Medix.UI.Services
 {
     public class MedixHP : IMedixHP, IGrpcService
     {
-        public MedixHP(MedixDbContext medixDbContext)
+        public MedixHP(MedixDbContext medixDbContext, IMapper mapper)
         {
             MedixDbContext = medixDbContext;
-
+            Mapper = mapper;
         }
 
         public IHttpContextAccessor HttpContextAccessor { get; set; }
         public MedixDbContext MedixDbContext { get; }
+        public IMapper Mapper { get; }
+
         public CodeResponse IssueCode(IssueCodeRequest codeRequest)
         {
             var list = MedixDbContext.Physicians.Add(new Models.Physician()
@@ -43,14 +46,17 @@ namespace MARCO.Medix.UI.Services
 
         public IEnumerable<IssueCodeRequest> GetIssuedCodes(GetIssuedCodesRequest request)
         {
-            var list = MedixDbContext.Physicians.ToList();
+
             throw new NotImplementedException();
         }
 
 
         public IEnumerable<Physician> GetPhysicians(string query)
         {
-            throw new NotImplementedException();
+            var physicians = MedixDbContext.Physicians.ToList();
+            var response = Mapper.Map<List<Dtos.Physician>>(physicians);
+
+            return response;
         }
 
 

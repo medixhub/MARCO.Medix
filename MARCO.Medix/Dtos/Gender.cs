@@ -10,11 +10,11 @@ namespace MARCO.Medix.Dtos
     [DataContract]
     public enum Gender
     {
-        [DataMember]
+        [EnumMember]
         Male = 0,
-        [DataMember]
+        [EnumMember]
         Female = 1,
-        [DataMember]
+        [EnumMember]
         Other = 2,
     }
 }

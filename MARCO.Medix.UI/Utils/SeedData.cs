@@ -6,13 +6,12 @@ using MARCO.Medix.UI.Models;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Physician = MARCO.Medix.UI.Models.Physician;
 
-namespace MARCO.Medix.UI.Tools
+namespace MARCO.Medix.UI.Utils;
+public class SeedData
 {
-    public class SeedData
+    public static void AddPhysicians(MedixDbContext dbContext)
     {
-        public static void AddPhysicians(MedixDbContext dbContext)
-        {
-            List<Physician> data = new List<Physician>()
+        List<Physician> data = new List<Physician>()
             {
                 new Physician()
                         {
@@ -67,9 +66,9 @@ namespace MARCO.Medix.UI.Tools
             }
         };
 
-            dbContext.Physicians.AddRange(data);
-            dbContext.SaveChanges();
+        dbContext.Physicians.AddRange(data);
+        dbContext.SaveChanges();
 
-        }
     }
 }
+

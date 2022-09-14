@@ -16,7 +16,7 @@ namespace MARCO.Medix.Dtos
         public string PhysicianId { get; set; }
         [DataMember]
         public string Name { get; set; }
-        [DataMember]
+       
         [JsonConverter(typeof(JsonStringEnumConverter))]
         [EnumDataType(typeof(Gender))]
         public Gender Gender { get; set; }

@@ -2,12 +2,13 @@ using MARCO.Medix.Dtos.Medix_H.Response;
 using MARCO.Medix.UI.Data;
 
 using MARCO.Medix.UI.Services;
-using MARCO.Medix.UI.Tools;
+using MARCO.Medix.UI.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,12 +35,16 @@ services.AddServiceModelGrpcSwagger();
 services.AddScoped<ICodeResponse, CodeResponse>();
 services.AddSwaggerGenNewtonsoftSupport();
 services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
-
+services.AddAutoMapper(typeof(MedixDbContext));
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<MedixDbContext>();
+    SeedData.AddPhysicians(dbContext);
+  
+}
 
-var dbContext = app.Services.GetRequiredService<MedixDbContext>();
-SeedData.AddPhysicians(dbContext);
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {

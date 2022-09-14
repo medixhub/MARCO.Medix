@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MARCO.Medix.UI.Tools
+namespace MARCO.Medix.UI.Utils
 {
     public class EnumSchemaFilter : ISchemaFilter
     {
