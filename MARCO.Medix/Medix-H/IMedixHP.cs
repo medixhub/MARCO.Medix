@@ -15,7 +15,7 @@ namespace MARCO.Medix.Medix_H
     public interface IMedixHP 
     {
         [OperationContract]
-        public CodeResponse IssueCode(IssueCodeRequest codeRequest);
+        public IssueCodeResponse IssueCode(IssueCodeRequest codeRequest);
         /// <summary>
         /// query can be a regex expression
         /// </summary>
@@ -30,7 +30,7 @@ namespace MARCO.Medix.Medix_H
         [OperationContract]
         public IEnumerable<Physician> GetPhysicians(string query);
         [OperationContract]
-        public IEnumerable<IssueCodeRequest> GetIssuedCodes(GetIssuedCodesRequest request);
+        public IEnumerable<IssueCodeResponse> GetIssuedCodes(GetIssuedCodesRequest request);
     }
  
 }

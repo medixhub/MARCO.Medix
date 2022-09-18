@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 namespace MARCO.Medix.Dtos.Medix_H.Response
 {
   
-    public interface ICodeResponse 
+    public interface IIssueCodeResponse 
     {
         public string Code { get; set; }
+   
+        public string StudyInstanceUID { get; set; }
     }
 }

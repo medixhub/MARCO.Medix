@@ -16,7 +16,8 @@ namespace MARCO.Medix.UI.Data
 
          
         }
-        public DbSet<Models.Code> Codes { get; set; }
+        public DbSet<Models.Study> Studies { get; set; }
         public DbSet<Models.Physician> Physicians { get; set; }
+        public DbSet<Models.IssueCode> IssueCodes { get; set; }
     }
 }

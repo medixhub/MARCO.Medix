@@ -32,7 +32,7 @@ services.AddSwaggerGen(c =>
 
 services.AddServiceModelGrpc();
 services.AddServiceModelGrpcSwagger();
-services.AddScoped<ICodeResponse, CodeResponse>();
+services.AddScoped<IIssueCodeResponse, IssueCodeResponse>();
 services.AddSwaggerGenNewtonsoftSupport();
 services.AddDbContext<MedixDbContext>(op => op.UseInMemoryDatabase("MedixDatabase"));
 services.AddAutoMapper(typeof(MedixDbContext));
