@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Contract\**" />
+    <Compile Remove="Dto\**" />
+    <Content Remove="Contract\**" />
+    <Content Remove="Dto\**" />
+    <EmbeddedResource Remove="Contract\**" />
+    <EmbeddedResource Remove="Dto\**" />
+    <None Remove="Contract\**" />
+    <None Remove="Dto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.21.5" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.48.0" />
     <PackageReference Include="Microsoft.AspNetCore.Grpc.HttpApi" Version="0.1.0-alpha.21317.5" />
@@ -49,9 +60,6 @@
     <ProjectReference Include="..\Medix\Medix.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contract\" />
-    <Folder Include="Dto\" />
-  </ItemGroup>
+  <Import Project="..\Medix.Common.Demo\Medix.Common.Demo.projitems" Label="Shared" />
 
 </Project>

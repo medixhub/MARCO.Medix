@@ -1,6 +1,6 @@
 ﻿
 using AutoMapper;
-namespace Medix.Grpc.Demo.Utils
+namespace Medix.Common.Demo
 {
     public class AutoMapping : Profile
     {

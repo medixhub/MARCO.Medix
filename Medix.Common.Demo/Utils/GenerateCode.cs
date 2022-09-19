@@ -1,4 +1,4 @@
-﻿namespace Medix.Grpc.Demo.Utils
+﻿namespace Medix.Common.Demo
 {
     public class GenerateCode
     {

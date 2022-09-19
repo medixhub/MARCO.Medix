@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
+using Medix.Common.Demo;
+using Medix.Common.Demo.Data;
+using Medix.Common.Demo.Models;
 using Medix.Dtos;
 using Medix.Dtos.Medix_H.Request;
 using Medix.Dtos.Medix_H.Response;
 using Medix.Grpc;
 using Medix.Medix_H;
-using Medix.Grpc.Demo.Data;
-using Medix.Grpc.Demo.Models;
+ 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Physician = Medix.Dtos.Physician;
@@ -26,12 +28,12 @@ namespace Medix.Grpc.Demo.Services
 
         public IssueCodeResponse IssueCode(IssueCodeRequest codeRequest)
         {
-            var study = Mapper.Map<Models.Study>(codeRequest);
+            var study = Mapper.Map<Common.Demo.Models.Study>(codeRequest);
 
             MedixDbContext.Studies.Add(study);
 
 
-            var code = Utils.GenerateCode.Code();
+            var code =GenerateCode.Code();
             var issuedCode = new IssueCode()
             {
                 Code = code,

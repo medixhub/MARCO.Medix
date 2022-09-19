@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix", "Medix\Medix.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix.Grpc.Demo", "Medix.Grpc.Demo\Medix.Grpc.Demo.csproj", "{13A5304E-1360-4B8A-B49F-11E3CE27EA9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medix.Grpc", "Medix.Grpc\Medix.Grpc.csproj", "{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix.Grpc", "Medix.Grpc\Medix.Grpc.csproj", "{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medix.WebApi.Demo", "Medix.WebApi.Demo\Medix.WebApi.Demo.csproj", "{F7016C45-7AFB-4714-8CA1-F2B6C5F8B3AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Medix.Common.Demo", "Medix.Common.Demo\Medix.Common.Demo.shproj", "{5CE75D84-ED55-43A7-9E36-4507FDAA4F85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,11 +31,20 @@ Global
 		{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7016C45-7AFB-4714-8CA1-F2B6C5F8B3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7016C45-7AFB-4714-8CA1-F2B6C5F8B3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7016C45-7AFB-4714-8CA1-F2B6C5F8B3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7016C45-7AFB-4714-8CA1-F2B6C5F8B3AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7C41DB2-DA70-44D4-BB0A-8EEB3D5F644B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Medix.Common.Demo\Medix.Common.Demo.projitems*{13a5304e-1360-4b8a-b49f-11e3ce27ea9f}*SharedItemsImports = 5
+		Medix.Common.Demo\Medix.Common.Demo.projitems*{5ce75d84-ed55-43a7-9e36-4507fdaa4f85}*SharedItemsImports = 13
+		Medix.Common.Demo\Medix.Common.Demo.projitems*{f7016c45-7afb-4714-8ca1-f2b6c5f8b3aa}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

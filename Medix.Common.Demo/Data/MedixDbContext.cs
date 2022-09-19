@@ -1,9 +1,10 @@
 ﻿
+using Medix.Common.Demo.Models;
 using Medix.Dtos;
 using Microsoft.EntityFrameworkCore;
-using Physician = Medix.Grpc.Demo.Models.Physician;
+using Physician = Medix.Common.Demo.Models.Physician;
 
-namespace Medix.Grpc.Demo.Data
+namespace Medix.Common.Demo.Data
 {
     public class MedixDbContext : DbContext
     {
@@ -16,8 +17,8 @@ namespace Medix.Grpc.Demo.Data
 
          
         }
-        public DbSet<Models.Study> Studies { get; set; }
-        public DbSet<Models.Physician> Physicians { get; set; }
-        public DbSet<Models.IssueCode> IssueCodes { get; set; }
+        public DbSet<Study> Studies { get; set; }
+        public DbSet<Physician> Physicians { get; set; }
+        public DbSet<IssueCode> IssueCodes { get; set; }
     }
 }

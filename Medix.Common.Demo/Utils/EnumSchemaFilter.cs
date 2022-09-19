@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-namespace Medix.Grpc.Demo.Utils
+namespace Medix.Common.Demo
 {
     public class EnumSchemaFilter : ISchemaFilter
     {

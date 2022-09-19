@@ -1,8 +1,7 @@
+using Medix.Common.Demo;
+using Medix.Common.Demo.Data;
 using Medix.Dtos.Medix_H.Response;
-using Medix.Grpc.Demo.Data;
-
 using Medix.Grpc.Demo.Services;
-using Medix.Grpc.Demo.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Any;

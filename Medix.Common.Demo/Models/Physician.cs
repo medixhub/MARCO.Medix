@@ -1,7 +1,7 @@
 ﻿using Medix.Dtos;
 using System.Text.Json.Serialization;
 
-namespace Medix.Grpc.Demo.Models
+namespace Medix.Common.Demo.Models
 {
     public class Physician : IPhysician
     {
