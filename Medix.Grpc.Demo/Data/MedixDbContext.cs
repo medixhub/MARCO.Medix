@@ -1,9 +1,9 @@
 ﻿
 using Medix.Dtos;
 using Microsoft.EntityFrameworkCore;
-using Physician = Medix.UI.Models.Physician;
+using Physician = Medix.Grpc.Demo.Models.Physician;
 
-namespace Medix.UI.Data
+namespace Medix.Grpc.Demo.Data
 {
     public class MedixDbContext : DbContext
     {

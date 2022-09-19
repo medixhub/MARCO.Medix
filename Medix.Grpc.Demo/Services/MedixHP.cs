@@ -4,13 +4,13 @@ using Medix.Dtos.Medix_H.Request;
 using Medix.Dtos.Medix_H.Response;
 using Medix.Grpc;
 using Medix.Medix_H;
-using Medix.UI.Data;
-using Medix.UI.Models;
+using Medix.Grpc.Demo.Data;
+using Medix.Grpc.Demo.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Physician = Medix.Dtos.Physician;
 
-namespace Medix.UI.Services
+namespace Medix.Grpc.Demo.Services
 {
     public class MedixHP : IMedixHP, IGrpcService
     {

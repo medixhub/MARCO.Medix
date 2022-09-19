@@ -1,8 +1,8 @@
 using Medix.Dtos.Medix_H.Response;
-using Medix.UI.Data;
+using Medix.Grpc.Demo.Data;
 
-using Medix.UI.Services;
-using Medix.UI.Utils;
+using Medix.Grpc.Demo.Services;
+using Medix.Grpc.Demo.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Any;
@@ -48,7 +48,7 @@ using (var scope = app.Services.CreateScope())
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mledger Kelishe");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Medix");
 });
 
 app.UseRouting();

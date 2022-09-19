@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Medix.UI.Models
+namespace Medix.Grpc.Demo.Models
 {
     public class IssueCode
     {

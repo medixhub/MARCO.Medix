@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace Medix.UI.Models
+namespace Medix.Grpc.Demo.Models
 {
     public class Study
     {

@@ -1,12 +1,10 @@
-﻿
-
-using Medix.Dtos;
-using Medix.UI.Data;
-using Medix.UI.Models;
+﻿using Medix.Dtos;
+using Medix.Grpc.Demo.Data;
+using Medix.Grpc.Demo.Models;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using Physician = Medix.UI.Models.Physician;
+using Physician = Medix.Grpc.Demo.Models.Physician;
 
-namespace Medix.UI.Utils;
+namespace Medix.Grpc.Demo.Utils;
 public class SeedData
 {
     public static void AddPhysicians(MedixDbContext dbContext)

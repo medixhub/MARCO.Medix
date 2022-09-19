@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix", "Medix\Medix.csproj", "{53B39367-7523-401D-8439-99CA5368FB8C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix.UI", "Medix.UI\Medix.UI.csproj", "{13A5304E-1360-4B8A-B49F-11E3CE27EA9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medix.Grpc.Demo", "Medix.Grpc.Demo\Medix.Grpc.Demo.csproj", "{13A5304E-1360-4B8A-B49F-11E3CE27EA9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medix.Grpc", "Medix.Grpc\Medix.Grpc.csproj", "{6643D8C5-ECC0-472D-B663-42D1FC4F4A5B}"
 EndProject
